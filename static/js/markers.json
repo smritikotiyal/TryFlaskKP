@@ -1,0 +1,91 @@
+[
+    {
+		"id": "BD1S1",
+		"center": [53.79290,-1.75427],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "BD1",
+		"desc": "City Park, Bradford",
+		"image": "../images/fp-5.jpg"
+	},	
+	{
+		"id": "BD1S2",
+		"center": [53.79236, -1.75334],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "BD1",
+		"desc": "The Bradford Police Museum",
+		"image": "../images/fp-5.jpg"
+	},
+	{
+		"id": "BD7S1",
+		"center": [53.791242, -1.766231],
+		"icon": "<i class='fa fa-flag'></i>",
+		"title": "BD7",
+		"desc": "Norcroft Brow",
+		"image": "../images/fp-5.jpg"
+	},
+	{
+		"id": "BD7S2",
+		"center": [53.790738, -1.770651],
+		"icon": "<i class='fa fa-flag'></i>",
+		"title": "BD7",
+		"desc": "Bombay Stores",	
+		"image": "../images/fp-5.jpg"
+	},
+	{
+		"id": "BD7S3",
+		"center": [53.789553, -1.766559],
+		"icon": "<i class='fa fa-flag'></i>",
+		"title": "BD7",
+		"desc": "Covid Testing Center",
+		"image": "../images/fp-5.jpg"
+	},		
+	{
+		"id": "BD7S4",
+		"center": [53.785161, -1.772791],
+		"icon": "<i class='fa fa-flag'></i>",
+		"title": "BD7",
+		"desc": "Horton Park Health Center",	
+		"image": "../images/fp-5.jpg"
+	},		
+	{
+		"id": "LS27S1",
+		"center": [53.75, -1.68],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "LS27",
+		"desc": "Depot Leeds",	
+		"image": "../images/fp-5.jpg"
+	},		
+	{
+		"id": "BD5S1",
+		"center": [53.78306, -1.76078],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "BD5",
+		"desc": "St. Lukes Hospital",	
+		"image": "../images/fp-5.jpg"
+	},		
+	{
+		"id": "BD1S3",
+		"center": [53.79166, -1.75639],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "BD1",
+		"desc": "National Science and Media Museum",	
+		"image": "../images/fp-5.jpg"
+	}
+	,		
+	{
+		"id": "BD1S4",
+		"center": [53.80059, -1.75370],
+		"icon": "<i class='fa fa-dot-circle-o'></i>",
+		"title": "BD1",
+		"desc": "Forster Square Shopping Park",
+		"image": "../images/fp-5.jpg"
+	},		
+	{
+		"id": "BD1S5",
+		"center": [53.79205, -1.75221],
+		"icon": "<i class='fa fa-home'></i>",
+		"title": "BD1",
+		"desc": "NCP Bradford Halls Ings",	
+		"image": "../images/fp-5.jpg"
+	}
+]
