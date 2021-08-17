@@ -9,6 +9,8 @@ import joblib
 
 application = Flask(__name__)
 
+basepath = "/var/flask-app/" #os.path.abspath(".")  | "./"
+
 @application.route('/')
 def index():
     return render_template('register.html')
@@ -25,7 +27,7 @@ def socCode(id='socCode'):
         print(JD)
 
     prediction = {}
-    df_description = pd.read_csv('./static/data/AYJ_Aug_Description.csv')
+    df_description = pd.read_csv(basepath + 'static/data/AYJ_Aug_Description.csv')
     classes = list(set(df_description['SOC']))
     df_prob = pd.DataFrame({"SOC": classes})
     df_prob.sort_values(by='SOC', ascending=True, inplace=True)
@@ -40,7 +42,7 @@ def socCode(id='socCode'):
         print('load models')
         # loaded_model = joblib.load("./static/models/random_forest.joblib")
         # loaded_model_nb = joblib.load("./static/models/naive_baeyes.joblib")
-        loaded_model = joblib.load("./static/models/naive_baeyes.joblib")
+        loaded_model = joblib.load(basepath + "static/models/naive_baeyes.joblib")
 
         pred = loaded_model.predict(df_data['JD'])
         y_proba = loaded_model.predict_proba(df_data['JD'])
