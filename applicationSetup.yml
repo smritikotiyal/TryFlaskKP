@@ -84,15 +84,15 @@
     #     dest: /var/flask-app/application.py
     #     force: yes 
 
-    - name: Install specified python requirements in indicated
-      pip:
-        requirements: /var/flask-app/requirements.txt
-
     - name: Clone a Web App repo
       ansible.builtin.git:
         repo: https://github.com/smritikotiyal/TryFlaskKP.git
         dest: /var/flask-app
         force: yes
+
+    - name: Install specified python requirements in indicated
+      pip:
+        requirements: /var/flask-app/requirements.txt
 
     - name: Create symbolic link 
       file:
