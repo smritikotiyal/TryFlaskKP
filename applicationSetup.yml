@@ -90,7 +90,7 @@
 
     - name: Clone a Web App repo
       ansible.builtin.git:
-        repo: https://github.com/smritikotiyal/TryFlask
+        repo: https://github.com/smritikotiyal/TryFlaskKP.git
         dest: /var/flask-app
         force: yes
 
