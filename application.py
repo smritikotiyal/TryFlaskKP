@@ -15,6 +15,9 @@ import joblib
 
 application = Flask(__name__)
 
+basepath = "/var/flask-app/" # os.path.abspath(".")  | "./"
+# basepath = "./"
+
 # Configure db
 db = yaml.load(open(basepath +'db.yaml'))
 application.config['MYSQL_HOST'] = db['mysql_host']
@@ -24,8 +27,7 @@ application.config['MYSQL_DB'] = db['mysql_db']
 application.config['MYSQL_PORT'] = db['mysql_port']
 mysql = MySQL(application)
 
-basepath = "/var/flask-app/" # os.path.abspath(".")  | "./"
-# basepath = "./"
+
 
 @application.route('/')
 def index():
