@@ -3,11 +3,24 @@ import numpy as np
 import pandas as pd
 # import json
 
+from flask_mysqldb import MySQL
+import yaml
+
 # For model dumping
 import joblib
 
 
 application = Flask(__name__)
+
+# Configure DB
+db = yaml.load(open('db.yaml'))
+
+application.config['MYSQL_HOST'] = db['mysql_host']
+application.config['MYSQL_USER'] = db['mysql_user']
+application.config['MYSQL_PASSWORD'] = db['mysql_password']
+application.config['MYSQL_DB'] = db['mysql_db']
+
+mysql = MySQL(application)
 
 basepath = "/var/flask-app/" #os.path.abspath(".")  | "./"
 
@@ -83,6 +96,11 @@ def socCode(id='socCode'):
     result += str(details[str(list_soc[2])])
     print(result)
 
+    cur = mysql.connection.cursor()
+    cur.execute("INSERT INTO test_table1 VALUES(2222, 'Dummy');")
+    mysql.connection.commit()
+    cur.close()
+    print('Success')
     '''json_object = json.dumps(details, indent = 4)
     print(json_object)'''
 

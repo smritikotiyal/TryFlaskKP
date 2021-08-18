@@ -1,0 +1,4 @@
+mysql_host = '172.31.16.125'
+mysql_user = 'root'
+mysql_password = 'Password2021'
+mysql_db = 'mysql_test'
