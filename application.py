@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, request, render_template
 import numpy as np
 import pandas as pd
+import os
 # import json
+# import mysql.connector
+# import flask_mysqldb.MySQL as MySQL
 
 from flask_mysqldb import MySQL
 import yaml
@@ -12,17 +15,17 @@ import joblib
 
 application = Flask(__name__)
 
-# Configure DB
+# Configure db
 db = yaml.load(open('db.yaml'))
-
 application.config['MYSQL_HOST'] = db['mysql_host']
 application.config['MYSQL_USER'] = db['mysql_user']
 application.config['MYSQL_PASSWORD'] = db['mysql_password']
 application.config['MYSQL_DB'] = db['mysql_db']
-
+application.config['MYSQL_PORT'] = db['mysql_port']
 mysql = MySQL(application)
 
-basepath = "/var/flask-app/" #os.path.abspath(".")  | "./"
+basepath = "/var/flask-app/" # os.path.abspath(".")  | "./"
+# basepath = "./"
 
 @application.route('/')
 def index():
@@ -97,7 +100,7 @@ def socCode(id='socCode'):
     print(result)
 
     cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO test_table1 VALUES(2222, 'Dummy');")
+    cur.execute("INSERT INTO test_table1 VALUES(5, 'Dummy');")
     mysql.connection.commit()
     cur.close()
     print('Success')

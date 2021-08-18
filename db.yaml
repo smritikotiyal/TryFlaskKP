@@ -1,4 +1,6 @@
-mysql_host = '172.31.16.125'
-mysql_user = 'root'
-mysql_password = 'Password2021'
-mysql_db = 'mysql_test'
+mysql_host: 'localhost'
+mysql_user: 'root'
+# Enter your password in field below
+mysql_password: 'Password2021'
+mysql_db: 'mysql_test'
+mysql_port: 3030
