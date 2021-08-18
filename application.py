@@ -16,7 +16,7 @@ import joblib
 application = Flask(__name__)
 
 # Configure db
-db = yaml.load(open('db.yaml'))
+db = yaml.load(open(basepath +'db.yaml'))
 application.config['MYSQL_HOST'] = db['mysql_host']
 application.config['MYSQL_USER'] = db['mysql_user']
 application.config['MYSQL_PASSWORD'] = db['mysql_password']
